@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="V65-eW-Qj2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu-->
+        <scene sceneID="Ava-N2-Umn">
+            <objects>
+                <viewController title="Menu" id="V65-eW-Qj2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cxt-cX-bhj"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Ge-Rw-0dV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8cu-C7-UG1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="menuBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="7yr-XC-xHt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gj0-Qg-iTo" userLabel="play">
+                                <rect key="frame" x="125" y="69" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="kIN-uw-kdv"/>
+                                    <constraint firstAttribute="width" constant="70" id="tSP-j8-UrY"/>
+                                </constraints>
+                                <state key="normal" image="play2.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="UgX-rn-EOC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="369-87-sff">
+                                <rect key="frame" x="114" y="179" width="92" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="VWU-Fw-pH2"/>
+                                    <constraint firstAttribute="width" constant="92" id="Wqp-gW-n11"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <state key="normal" title="Highscores">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Opy-Hh-oqI" kind="show" id="qTM-2J-pv1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gj0-Qg-iTo" firstAttribute="top" secondItem="Cxt-cX-bhj" secondAttribute="bottom" constant="49" id="1nt-LI-2jq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7yr-XC-xHt" secondAttribute="trailing" constant="-16" id="239-S3-EjH"/>
+                            <constraint firstItem="7yr-XC-xHt" firstAttribute="leading" secondItem="8cu-C7-UG1" secondAttribute="leadingMargin" constant="-16" id="36e-Pb-Xz1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="369-87-sff" secondAttribute="trailing" constant="98" id="8bX-hH-AVp"/>
+                            <constraint firstItem="4Ge-Rw-0dV" firstAttribute="top" secondItem="7yr-XC-xHt" secondAttribute="bottom" id="Gx7-42-CRB"/>
+                            <constraint firstItem="7yr-XC-xHt" firstAttribute="top" secondItem="8cu-C7-UG1" secondAttribute="topMargin" id="PXx-oD-CdE"/>
+                            <constraint firstItem="4Ge-Rw-0dV" firstAttribute="top" secondItem="369-87-sff" secondAttribute="bottom" constant="372" id="R3O-dk-Ufo"/>
+                            <constraint firstItem="369-87-sff" firstAttribute="top" secondItem="gj0-Qg-iTo" secondAttribute="bottom" constant="30" id="VhK-er-NQN"/>
+                            <constraint firstItem="369-87-sff" firstAttribute="top" secondItem="gj0-Qg-iTo" secondAttribute="bottom" constant="30" id="o5m-OB-NcR"/>
+                            <constraint firstItem="gj0-Qg-iTo" firstAttribute="leading" secondItem="8cu-C7-UG1" secondAttribute="leadingMargin" constant="109" id="oXg-yR-LNj"/>
+                            <constraint firstItem="369-87-sff" firstAttribute="leading" secondItem="8cu-C7-UG1" secondAttribute="leadingMargin" constant="98" id="sgT-ZU-fM9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gj0-Qg-iTo" secondAttribute="trailing" constant="109" id="wlH-LH-D4G"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Acw-8T-ITR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="501" y="-282"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Dq6-gO-ybm">
+            <objects>
+                <viewController id="Opy-Hh-oqI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HQU-Jf-ltD"/>
+                        <viewControllerLayoutGuide type="bottom" id="qNM-pf-rhf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fhu-qm-Hxt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="menuBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="wms-vl-byI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Your current high score is" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCW-b3-4sZ">
+                                <rect key="frame" x="-6" y="222" width="332" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkI-gt-My3">
+                                <rect key="frame" x="108" y="184" width="105" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Go back">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="V65-eW-Qj2" kind="show" id="rHM-1t-HfN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fkI-gt-My3" firstAttribute="top" secondItem="HQU-Jf-ltD" secondAttribute="bottom" constant="164" id="EYA-yn-FhL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fkI-gt-My3" secondAttribute="trailing" constant="91" id="JLo-7z-vnP"/>
+                            <constraint firstItem="fkI-gt-My3" firstAttribute="leading" secondItem="Fhu-qm-Hxt" secondAttribute="leadingMargin" constant="92" id="tRw-fy-bz0"/>
+                            <constraint firstItem="yCW-b3-4sZ" firstAttribute="top" secondItem="fkI-gt-My3" secondAttribute="bottom" constant="8" id="u9J-SJ-7tX"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1L6-Tq-hTV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1010" y="-275"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="Escape_with_Stick" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="maK-i9-Uhn"/>
+                        <viewControllerLayoutGuide type="bottom" id="khH-OB-KpY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-14" y="-282"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="menuBG.png" width="900" height="504"/>
+        <image name="play2.png" width="80" height="80"/>
+    </resources>
+</document>
