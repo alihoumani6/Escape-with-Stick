@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>46303156-5B46-4BC2-BC69-2848E6D5D90E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Escape with Stick</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D14F1FA27291CF0369D3726B67BE2791E230D580</key>
+		<string>https://github.com/alihoumani6/Escape-with-Stick.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Escape with Stick.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D14F1FA27291CF0369D3726B67BE2791E230D580</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/alihoumani6/Escape-with-Stick.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D14F1FA27291CF0369D3726B67BE2791E230D580</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D14F1FA27291CF0369D3726B67BE2791E230D580</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Escape%20with%20Stick</string>
+		</dict>
+	</array>
+</dict>
+</plist>

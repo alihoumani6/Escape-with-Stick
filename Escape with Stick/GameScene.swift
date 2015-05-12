@@ -22,7 +22,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var moveYup = SKAction.moveToY(5, duration: 1)
     
     var moveYdown = SKAction.moveToY(-5, duration: 1)
-
+    
     var bgMusic = SKAction.playSoundFileNamed("SuperBGM.mp3", waitForCompletion: true)
     
     var pointSound = SKAction.playSoundFileNamed("MarioCoin.mp3", waitForCompletion: true)
@@ -58,7 +58,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         var heroTexture = SKTexture(imageNamed: "img/flyingstick.png")
         var heroTexture2 = SKTexture(imageNamed: "img/flyingstick2.png")
         
-       
+        
         
         
         //sets up animation
@@ -98,7 +98,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //adds new object on the screen, hero
         self.addChild(hero)
         
-    
+        
         
         
         //ground
@@ -115,7 +115,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scoreLabel.text = "0"
         scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height - 70)
         self.addChild(scoreLabel)
-
+        
         
         //timer
         var timer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: Selector("makeAliens"), userInfo: nil, repeats: true)
@@ -126,13 +126,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //music
-
+    
     
     func playSound(bgMusic : SKAction)
     {
-     
-
-            runAction(bgMusic)
+        
+        
+        runAction(bgMusic)
         
         
     }
@@ -181,7 +181,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             var moveAliensUp = SKAction.repeatActionForever(animateMoveAliensUp)
             var moveAliensDown = SKAction.repeatActionForever(animateMoveAliensDown)
             
-
+            
             // size of 4 heroes to allow us to pass through
             let gapHeight = hero.size.height * 4
             
@@ -211,7 +211,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             //images, positioning of Aliens AND MUSIC
             var AliensTexture = SKTexture(imageNamed: "img/alienstick1.png")
             var alien1 = SKSpriteNode(texture: AliensTexture)
-
+            
             //sets the position so the aliens appear half a screen away
             alien1.position = CGPoint(x: CGRectGetMidX(self.frame) + self.frame.size.width, y: CGRectGetMidY(self.frame) + alien1.size.height / 2 + gapHeight / 2 + AliensOffset)
             alien1.runAction(moveAndRemoveAliens)
@@ -220,7 +220,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             alien1.physicsBody = SKPhysicsBody(rectangleOfSize: alien1.size)
             alien1.physicsBody?.dynamic = false
             alien1.physicsBody?.categoryBitMask = objectGroup
-           // alien1.runAction(moveAliensUp)
+            // alien1.runAction(moveAliensUp)
             
             //add Aliens
             movingObjects.addChild(alien1)
@@ -265,26 +265,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
-  
-    
+
+
     func didBeginContact(contact: SKPhysicsContact) {
         // method for the contact of the hero and ground or hero and Aliens
         
         //To save highest score
-       
+        
         NSUserDefaults.standardUserDefaults().setObject(score, forKey:"Score")
         NSUserDefaults.standardUserDefaults().synchronize()
         
         //To get the saved score
         var savedScore: Int = NSUserDefaults.standardUserDefaults().objectForKey("Score") as! Int
-
+        
         
         if contact.bodyA.categoryBitMask == gapGroup || contact.bodyB.categoryBitMask == gapGroup {
             score++
             scoreLabel.text = "\(score)"
             gotPoint(pointSound)
             println(savedScore)
-
+            
             
         }
         else {
@@ -304,9 +304,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
     }
-
-
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    
+    
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         /* Called when a touch begins */
         
         
@@ -329,7 +330,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             makeBackground()
             
-           // playSound(bgMusic)
+            // playSound(bgMusic)
             
             hero.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame))
             
